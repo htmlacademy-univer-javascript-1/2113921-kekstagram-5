@@ -5,9 +5,9 @@ function lengthString (str, maxLength) {
   return str.length <= maxLength;
 }
 
-console.log(lengthString('проверяемая строка', 20));
-console.log(lengthString('проверяемая строка', 18));
-console.log(lengthString('проверяемая строка', 10));
+// console.log(lengthString('проверяемая строка', 20));
+// console.log(lengthString('проверяемая строка', 18));
+// console.log(lengthString('проверяемая строка', 10));
 
 
 // Функция для проверки, является ли строка палиндромом. Палиндром — это слово или фраза,
@@ -18,10 +18,10 @@ function palindrom (str) {
   return lowerCaseStr === lowerCaseStr.split('').reverse().join('');
 }
 
-console.log(palindrom('топот'));
-console.log(palindrom('ДовОд'));
-console.log(palindrom('Кекс'));
-console.log(palindrom('Лёша на полке клопа нашёл '));
+// console.log(palindrom('топот'));
+// console.log(palindrom('ДовОд'));
+// console.log(palindrom('Кекс'));
+// console.log(palindrom('Лёша на полке клопа нашёл '));
 
 
 // Функция принимает строку, извлекает содержащиеся в ней цифры от 0 до 9 и возвращает их в
@@ -32,11 +32,11 @@ function extractNumber(str) {
   return number ? parseInt(number, 10) : NaN;
 }
 
-console.log(extractNumber('2023 год'));
-console.log(extractNumber('ECMAScript 2022'));
-console.log(extractNumber('1 кефир, 0.5 батона'));
-console.log(extractNumber('агент 007'));
-console.log(extractNumber('а я томат'));
-console.log(extractNumber('2023'));
-console.log(extractNumber('-1'));
-console.log(extractNumber('1.5'));
+// console.log(extractNumber('2023 год'));
+// console.log(extractNumber('ECMAScript 2022'));
+// console.log(extractNumber('1 кефир, 0.5 батона'));
+// console.log(extractNumber('агент 007'));
+// console.log(extractNumber('а я томат'));
+// console.log(extractNumber('2023'));
+// console.log(extractNumber('-1'));
+// console.log(extractNumber('1.5'));
