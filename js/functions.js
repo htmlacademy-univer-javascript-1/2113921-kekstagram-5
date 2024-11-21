@@ -5,6 +5,7 @@ function lengthString (str, maxLength) {
   return str.length <= maxLength;
 }
 
+lengthString('проверяемая строка', 20);
 // console.log(lengthString('проверяемая строка', 20));
 // console.log(lengthString('проверяемая строка', 18));
 // console.log(lengthString('проверяемая строка', 10));
@@ -18,6 +19,7 @@ function palindrom (str) {
   return lowerCaseStr === lowerCaseStr.split('').reverse().join('');
 }
 
+palindrom('топот');
 // console.log(palindrom('топот'));
 // console.log(palindrom('ДовОд'));
 // console.log(palindrom('Кекс'));
@@ -32,6 +34,7 @@ function extractNumber(str) {
   return number ? parseInt(number, 10) : NaN;
 }
 
+extractNumber('2023 год');
 // console.log(extractNumber('2023 год'));
 // console.log(extractNumber('ECMAScript 2022'));
 // console.log(extractNumber('1 кефир, 0.5 батона'));
