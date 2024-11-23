@@ -14,16 +14,16 @@ lengthString('проверяемая строка', 20);
 // Функция для проверки, является ли строка палиндромом. Палиндром — это слово или фраза,
 // которые одинаково читаются и слева направо и справа налево.
 
-function palindrom (str) {
+function checkPalindrom (str) {
   const lowerCaseStr = str.toLowerCase().replaceAll(' ', '');
   return lowerCaseStr === lowerCaseStr.split('').reverse().join('');
 }
 
-palindrom('топот');
-// console.log(palindrom('топот'));
-// console.log(palindrom('ДовОд'));
-// console.log(palindrom('Кекс'));
-// console.log(palindrom('Лёша на полке клопа нашёл '));
+checkPalindrom('топот');
+// console.log(checkPalindrom('топот'));
+// console.log(checkPalindrom('ДовОд'));
+// console.log(checkPalindrom('Кекс'));
+// console.log(checkPalindrom('Лёша на полке клопа нашёл '));
 
 
 // Функция принимает строку, извлекает содержащиеся в ней цифры от 0 до 9 и возвращает их в
