@@ -29,7 +29,8 @@ checkPalindrom('топот');
 // Функция принимает строку, извлекает содержащиеся в ней цифры от 0 до 9 и возвращает их в
 // виде целого положительного числа. Если в строке нет ни одной цифры, функция должна вернуть NaN
 
-function extractNumber(str) {
+function extractNumber(input) {
+  const str = String(input);
   const number = str.replace(/[^0-9]/g, '');
   return number ? parseInt(number, 10) : NaN;
 }
