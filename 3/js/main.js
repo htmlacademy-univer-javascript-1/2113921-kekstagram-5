@@ -31,24 +31,19 @@ const getRandomInteger = (a, b) => {
 
 const getRandomArrayElement = (elements) => elements[getRandomInteger(0, elements.length - 1)];
 
-let commentIdCounter = 1;
-
-const createComment = () => {
-  const id = commentIdCounter++;
+const createComment = (element, index) => {
+  const id = index + 1;
   const avatarNumber = getRandomInteger(1, 6);
   const avatar = `img/avatar-${avatarNumber}.svg`;
-
   const messageCount = getRandomInteger(1, 2);
-  const messages = Array.from({length: messageCount}, () => getRandomArrayElement(MESSAGES));
-  const message = messages.join(" ");
-
+  const message = Array.from({length: messageCount}, () => getRandomArrayElement(MESSAGES)).join(" ");
   const name = getRandomArrayElement(NAMES);
 
   return {
-    id: id,
-    avatar: avatar,
-    message: message,
-    name: name
+    id,
+    avatar,
+    message,
+    name
   };
 };
 
@@ -57,16 +52,15 @@ const createPhoto = (index) => {
   const url = `photos/${id}.jpg`;
   const description = getRandomArrayElement(DESCRIPTIONS);
   const likes = getRandomInteger(15, 200);
-
   const commentCount = getRandomInteger(0, 30);
   const comments = Array.from({length: commentCount}, createComment);
 
   return {
-    id: id,
-    url: url,
-    description: description,
-    likes: likes,
-    comments: comments
+    id,
+    url,
+    description,
+    likes,
+    comments
   };
 };
 
