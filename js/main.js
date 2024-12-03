@@ -37,11 +37,8 @@ const createComment = () => {
   const id = commentIdCounter++;
   const avatarNumber = getRandomInteger(1, 6);
   const avatar = `img/avatar-${avatarNumber}.svg`;
-
   const messageCount = getRandomInteger(1, 2);
-  const messages = Array.from({length: messageCount}, () => getRandomArrayElement(MESSAGES));
-  const message = messages.join(" ");
-
+  const message = Array.from({length: messageCount}, () => getRandomArrayElement(MESSAGES)).join(" ");
   const name = getRandomArrayElement(NAMES);
 
   return {
@@ -57,7 +54,6 @@ const createPhoto = (index) => {
   const url = `photos/${id}.jpg`;
   const description = getRandomArrayElement(DESCRIPTIONS);
   const likes = getRandomInteger(15, 200);
-
   const commentCount = getRandomInteger(0, 30);
   const comments = Array.from({length: commentCount}, createComment);
 
