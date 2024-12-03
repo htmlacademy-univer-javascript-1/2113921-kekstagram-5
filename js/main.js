@@ -31,10 +31,8 @@ const getRandomInteger = (a, b) => {
 
 const getRandomArrayElement = (elements) => elements[getRandomInteger(0, elements.length - 1)];
 
-let commentIdCounter = 1;
-
-const createComment = () => {
-  const id = commentIdCounter++;
+const createComment = (element, index) => {
+  const id = index + 1;
   const avatarNumber = getRandomInteger(1, 6);
   const avatar = `img/avatar-${avatarNumber}.svg`;
   const messageCount = getRandomInteger(1, 2);
