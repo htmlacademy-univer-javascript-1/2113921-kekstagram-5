@@ -45,10 +45,10 @@ const createComment = () => {
   const name = getRandomArrayElement(NAMES);
 
   return {
-    id: id,
-    avatar: avatar,
-    message: message,
-    name: name
+    id,
+    avatar,
+    message,
+    name
   };
 };
 
@@ -62,11 +62,11 @@ const createPhoto = (index) => {
   const comments = Array.from({length: commentCount}, createComment);
 
   return {
-    id: id,
-    url: url,
-    description: description,
-    likes: likes,
-    comments: comments
+    id,
+    url,
+    description,
+    likes,
+    comments
   };
 };
 
