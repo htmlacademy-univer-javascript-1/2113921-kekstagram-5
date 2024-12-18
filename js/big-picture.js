@@ -16,16 +16,19 @@ const onPopupEscKeydown = (evt) => {
   }
 };
 
-function showBigPicture(photo) {
+function renderPhotoData(photo) {
   bigImg.src = photo.url;
   bigImg.alt = photo.description;
   likesCount.textContent = photo.likes;
   commentsCount.textContent = photo.comments.length;
   socialCaption.textContent = photo.description;
-  socialCommentsList.innerHTML = "";
+}
 
+function renderComments(comments) {
+  socialCommentsList.innerHTML = "";
   const fragment = document.createDocumentFragment();
-  photo.comments.forEach(({avatar, name, message}) => {
+
+  comments.forEach(({avatar, name, message}) => {
     const li = document.createElement("li");
     li.classList.add("social__comment");
 
@@ -46,6 +49,11 @@ function showBigPicture(photo) {
   });
 
   socialCommentsList.append(fragment);
+}
+
+function showBigPicture(photo) {
+  renderPhotoData(photo);
+  renderComments(photo.comments);
 
   commentCountBlock.classList.add("hidden");
   commentsLoader.classList.add("hidden");
